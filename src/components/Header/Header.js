@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from '../Logo/Logo';
 import Burger from '../Burger/Burger';
 import Navigation from '../Navigation/Navigation';
+import Button from '../Button/Button';
 
 export class Header extends Component {
   render() {
@@ -18,7 +19,9 @@ export class Header extends Component {
 
           <Navigation classes={`${blockName}__nav`} />
 
-          <button className="btn btn--light header__btn toggle-shops" type="button">Купить</button>
+          <Button config='button' mode='light' classes={`${blockName}__btn`} text='Купить' />
+
+          {/* <button className="btn btn--light header__btn toggle-shops" type="button">Купить</button> */}
 
           <div className="socials header__socials">
             <ul className="socials__list">
