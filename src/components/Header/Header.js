@@ -1,31 +1,20 @@
 import React, { Component } from 'react';
-import logoMob from './logo-mob.png';
-import logoDesk from './logo-desk.png';
+import Logo from '../Logo/Logo';
+import Burger from '../Burger/Burger';
 
 export class Header extends Component {
   render() {
+    const blockName = 'header';
     return (
-      <header className='header app__header'>
-        <a className='logo header__logo header__logo--outer' href='#'>
-          <img className='logo__img' src={logoMob} alt='Слобода лого'></img>
-        </a>
-        <button className="burger header__burger" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.8 23" className="burger__icon burger__icon--burger" width="20" height="20" >
-            <path d="M1.1 6.9h13.3M1.1 1h19.8M1.1 12.8h19.8"></path>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.8 23" className="burger__icon burger__icon--close" width="20" height="20">
-            <path d="M1.4 2.2l10 9.5-10 9.5"></path>
-            <path d="M21.3 2.2l-10 9.5 10 9.5"></path>
-          </svg>
-        </button>
-        <div className="header__wrap">
-          <a className="logo header__logo header__logo--inner" href="/">
-            <picture>
-              <source media="(max-width: 1279px)" srcset={logoMob} />
-              <source media="(max-width: 1280px)" srcset={logoDesk} />
-              <img className="logo__img" src={logoMob} alt="Слобода лого" />
-            </picture>
-          </a>
+      <header className={`${blockName} app__${blockName}`}>
+        <Logo config='outer' classes={`${blockName}__logo ${blockName}__logo--outer`} />
+
+        <Burger classes={`${blockName}__burger`} />
+
+        <div className={`${blockName}__wrap`}>
+
+          <Logo config='inner' classes='header__logo header__logo--inner' />
+
           <nav className="nav header__nav">
             <ul className="nav__list">
               <li className="nav__item"><a className="nav__link" href="about.html">О бренде</a></li>
