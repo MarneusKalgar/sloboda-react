@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../Logo/Logo';
 import Burger from '../Burger/Burger';
+import Navigation from '../Navigation/Navigation';
 
 export class Header extends Component {
   render() {
@@ -13,16 +14,12 @@ export class Header extends Component {
 
         <div className={`${blockName}__wrap`}>
 
-          <Logo config='inner' classes='header__logo header__logo--inner' />
+          <Logo config='inner' classes={`${blockName}__logo ${blockName}__logo--inner`} />
 
-          <nav className="nav header__nav">
-            <ul className="nav__list">
-              <li className="nav__item"><a className="nav__link" href="about.html">О бренде</a></li>
-              <li className="nav__item"><a className="nav__link" href="beverage-3in1.html">Продукция</a></li>
-              <li className="nav__item"><a className="nav__link" href="contacts.html">Контакты</a></li>
-            </ul>
-          </nav>
+          <Navigation classes={`${blockName}__nav`} />
+
           <button className="btn btn--light header__btn toggle-shops" type="button">Купить</button>
+
           <div className="socials header__socials">
             <ul className="socials__list">
               <li className="socials__item">
