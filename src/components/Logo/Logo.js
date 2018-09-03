@@ -5,13 +5,13 @@ import logoDesk from './logo-desk.png';
 
 const logo = props => {
   let logo = null;
-  const blockName = 'logo';
+  const blockName = 'Logo';
   const classNames = `${blockName} ${props.classes}`;
 
   if (props.config === 'outer') {
     logo = (
       <a className={classNames} href='#'>
-        <img className={`${blockName}__img`} src={logoMob} alt='Слобода лого'></img>
+        <img className={`${blockName}-Img`} src={logoMob} alt='Слобода лого'></img>
       </a>
     )
   } else if (props.config === 'inner') {
@@ -20,7 +20,7 @@ const logo = props => {
         <picture>
           <source media='(max-width: 1279px)' srcSet={logoMob} />
           <source media='(max-width: 1280px)' srcSet={logoDesk} />
-          <img className={`${blockName}__img`} src={logoMob} alt='Слобода лого' />
+          <img className={`${blockName}-Img`} src={logoMob} alt='Слобода лого' />
         </picture>
       </a>
     )

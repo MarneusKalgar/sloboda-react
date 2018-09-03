@@ -1,0 +1,32 @@
+// Bourbon toolkit
+// @import "bourbon";
+
+// Vendor deps
+@import "vendors";
+@include normalize();
+
+// Authored Dependencies
+@import "variables";
+@import "fonts";
+@import "helpers";
+
+// Base and common
+@import "base";
+@import "common";
+
+// Blocks
+// @import "scss/blocks/btn";
+// @import "scss/blocks/shops";
+// @import "scss/blocks/logo";
+// @import "scss/blocks/socials";
+// @import "scss/blocks/langs";
+// @import "scss/blocks/burger";
+@import "scss/blocks/header";
+// @import "scss/blocks/nav";
+// @import "scss/blocks/hero";
+// @import "scss/blocks/glide";
+// @import "scss/blocks/products";
+// @import "scss/blocks/pack";
+// @import "scss/blocks/info";
+// @import "scss/blocks/contacts";
+// @import "scss/blocks/about";

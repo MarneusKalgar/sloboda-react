@@ -16,16 +16,16 @@ const items = [
 ];
 
 const navigation = props => {
-  const blockName = 'nav';
+  const blockName = 'Nav';
   const classNames = `${blockName} ${props.classes}`;
 
   return (
     <nav className={classNames}>
-      <ul className={`${blockName}__list`}>
+      <ul className={`${blockName}-List`}>
         {items.map(item => {
           return (
-            <li className={`${blockName}__item`} key={item.key}>
-              <a className={`${blockName}__link`} href="#">{item.name}</a>
+            <li className={`${blockName}-Item`} key={item.key}>
+              <a className={`${blockName}-Link`} href="#">{item.name}</a>
             </li>
           );
         })}

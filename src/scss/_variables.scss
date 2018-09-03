@@ -1,0 +1,51 @@
+$color-text: #fff;
+$color-light: #fff;
+$color-dark: #000;
+
+$strong: #0b1f4f;
+$nut: #653715;
+$caramel: #cb8d29;
+$classic: #ba1e0d;
+$milk: #3a7bc1;
+$spices: #da6532;
+$choko: #2d1e1a;
+$almond: #c2737b;
+$cherry: #b0203b;
+$cream: #c9a164;
+$cap-icecream: #64a5e2;
+$cap-classic: #622f81;
+$cap-cream: #9a6658;
+$coffee-classic: #930e13;
+
+$strong-inner: #00b7f4;
+$nut-inner: #9ebf34;
+$caramel-inner: #df7a13;
+$classic-inner: #9c0006;
+$milk-inner: #5ec7ea;
+$spices-inner: #e6c551;
+$choko-inner: #805648;
+$almond-inner: #aab757;
+$cherry-inner: #ff739c;
+$cream-inner: #adcd53;
+
+$pad-mob: 30px;
+$pad-tab: 45px;
+$pad-desk: 4%;
+
+$header-width: 250px;
+$top-bar-height: 108px;
+
+$ff-default: 'Montserrat', Arial, Helvetica, sans-serif;
+$font-size-default: 1rem;
+
+// Media
+$phone-width:     320px;
+$tablet-width:    768px;
+$ipad-width:      1024px;
+$macbook-width:   1280px;
+$laptop-width:    1366px;
+$laptop-lg-width: 1440px;
+$full-hd-width:   1900px;
+
+// Bourbon
+$em-base: 16px; // Sets global base em size for the px-to-em and px-to-rem function. This should be the same size as your body font-size. Setting default is 16px.

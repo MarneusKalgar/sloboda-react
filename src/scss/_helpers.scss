@@ -1,0 +1,117 @@
+@function pct($target, $context) {
+  @if not unitless($target) {
+    $target: strip-units($target);
+  }
+  @if not unitless($context) {
+    $context: strip-units($context);
+  }
+  @return ($target / $context) * 100%;
+}
+
+@function percs($target, $context) {
+  @return pct($target, $context);
+}
+
+@mixin no-selection {
+  &::-moz-selection {
+    background: transparent;
+    text-shadow: none;
+  }
+
+  &::selection {
+    background: transparent;
+    text-shadow: none;
+  }
+}
+
+@mixin placeholder-styling { color: rgba(153, 153, 153, 0.5) !important; @include opacity(100); }
+
+/// Strips the unit from a number.
+///
+/// @param {Number (With Unit)} $value
+///
+/// @example scss - Usage
+///   $dimension: strip-units(10em);
+///
+/// @example css - CSS Output
+///   $dimension: 10;
+///
+/// @return {Number (Unitless)}
+
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// Convert pixels to ems
+// eg. for a relational value of 12px write em(12) when the parent is 16px
+// if the parent is another value say 24px write em(12, 24)
+
+@function em($pxval, $base: $em-base) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1em;
+}
+
+// Convert pixels to rems
+// eg. for a relational value of 12px write rem(12)
+// Assumes $em-base is the font-size of <html>
+
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
+
+////////////////////////////// MIXINS MEDIA /////////////////////////////////////////////////
+
+@mixin phone {
+  @media screen and (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin tabletLand {
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin maxW($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin minW($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+@mixin maxH($height) {
+  @media screen and (max-height: $height) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (min-width: 1280px) and (max-width: 1440px) and (min-height: 600px) and (max-height: 760px) {
+    @content;
+  }
+}

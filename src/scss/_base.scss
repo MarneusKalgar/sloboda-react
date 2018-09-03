@@ -1,0 +1,125 @@
+html {
+  background: #fff;
+  font-family: $ff-default;
+  font-size: $font-size-default;
+  line-height: 1.123;
+  color: $color-text;
+  cursor: default;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+:root {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+main,
+div,
+p,
+button,
+form,
+input,
+textarea,
+label,
+ol,
+ul,
+li,
+a {
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea,
+label {
+  display: block;
+}
+
+input,
+textarea {
+  border-radius: 0;
+
+  // remove IE “clear field” X button
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 600;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p { margin: 0 0 1em 0; }
+
+img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+svg {
+  display: block;
+  pointer-events: none;
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  background: rgba(0,0,0,0);
+  cursor: pointer;
+}
+
+a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a,
+button {
+  &:hover,
+  &:active {
+    outline: none;
+  }
+}
