@@ -1,7 +1,5 @@
 body {
   &.isFixed {
-    // @include position(fixed, 0 null null 0);
-    //@include size(100%, 100%);
     overflow: hidden;
   }
 
@@ -14,20 +12,20 @@ body {
   }
 }
 
-.app {
+// .app {
 
-  &__header {
-    @include position(fixed, 0 null null 0);
-    z-index: 10;
-    @include size(100%, em(80px));
+//   &__header {
+//     // @include position(fixed, 0 null null 0);
+//     z-index: 10;
+//     @include size(100%, em(80px));
 
-    // >= 768
-    @include minW($macbook-width) {
-      width: em($header-width);
-      height: 100vh;
-    }
-  }
-}
+//     // >= 768
+//     @include minW($macbook-width) {
+//       width: em($header-width);
+//       height: 100vh;
+//     }
+//   }
+// }
 
 .section {
   position: relative;
@@ -36,105 +34,106 @@ body {
   background-color: $strong;
   overflow: hidden;
 
-  &::after {
-    @supports(filter: blur(40px)) {
-      content: '';
-      @include position(absolute, null -50vw -50vw null);
-      @include size(100vw, 100vw);
-      background-color: $strong-inner;
-      border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.1;
-      pointer-events: none;
-    }
-  }
+  //&::after {
+  //  @supports(filter: blur(40px)) {
+  //    content: '';
+  //    @include position(absolute, null -50vw -50vw null);
+  //    @include size(100vw, 100vw);
+  //    background-color: $strong-inner;
+  //    border-radius: 50%;
+  //    filter: blur(40px);
+  //    opacity: 0.1;
+  //    pointer-events: none;
+  //  }
+  //}
 
-  // >= 1280
-  @include minW($macbook-width) {
-    margin-left: em($header-width);
-  }
+
+//   // >= 1280
+//   @include minW($macbook-width) {
+//     margin-left: em($header-width);
+//   }
 }
 
-.container {
-  position: relative;
-  z-index: 1;
-  padding: 0 em($pad-mob);
+// .container {
+//   position: relative;
+//   z-index: 1;
+//   padding: 0 em($pad-mob);
 
-  // >= 768
-  @include minW($tablet-width) {
-    padding: 0 em($pad-tab);
-  }
+//   // >= 768
+//   @include minW($tablet-width) {
+//     padding: 0 em($pad-tab);
+//   }
 
-  // >= 1280
-  @include minW($macbook-width) {
-    padding: 0 $pad-desk;
-  }
+//   // >= 1280
+//   @include minW($macbook-width) {
+//     padding: 0 $pad-desk;
+//   }
 
-  // >= 1366
-  @include minW($laptop-width) {
-    padding: 0 8%;
-  }
-}
+//   // >= 1366
+//   @include minW($laptop-width) {
+//     padding: 0 8%;
+//   }
+// }
 
-.title {
-  font-size: rem(22px);
-  font-weight: 600;
-  text-transform: uppercase;
-  color: $color-light;
+// .title {
+//   font-size: rem(22px);
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   color: $color-light;
 
-  // >= 1024
-  @include minW($ipad-width) {
-    font-size: rem(30px);
-  }
-}
+//   // >= 1024
+//   @include minW($ipad-width) {
+//     font-size: rem(30px);
+//   }
+// }
 
-.next {
-  display: block;
-  border-radius: 50%;
+// .next {
+//   display: block;
+//   border-radius: 50%;
 
-  &:focus,
-  &:active {
-    outline: none;
-  }
+//   &:focus,
+//   &:active {
+//     outline: none;
+//   }
 
-  svg {
-    @include position(absolute, 50% null null 50%);
-    transform: translate(-50%, -50%);
-    fill: none;
-    stroke: $color-light;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
-  }
-}
+//   svg {
+//     @include position(absolute, 50% null null 50%);
+//     transform: translate(-50%, -50%);
+//     fill: none;
+//     stroke: $color-light;
+//     stroke-width: 3;
+//     stroke-linecap: round;
+//     stroke-linejoin: round;
+//     stroke-miterlimit: 10;
+//   }
+// }
 
-.close {
-  svg {
-    fill: none;
-    stroke: $color-light;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
-    transition: stroke 0.3s ease;
-  }
-}
+// .close {
+//   svg {
+//     fill: none;
+//     stroke: $color-light;
+//     stroke-width: 3;
+//     stroke-linecap: round;
+//     stroke-linejoin: round;
+//     stroke-miterlimit: 10;
+//     transition: stroke 0.3s ease;
+//   }
+// }
 
-.backdrop {
-  @include position(fixed, 0 0 0 0);
-  z-index: 11;
-  background-color: rgba($strong, 0.5);
-  visibility: hidden;
-  opacity: 0;
+// .backdrop {
+//   @include position(fixed, 0 0 0 0);
+//   z-index: 11;
+//   background-color: rgba($strong, 0.5);
+//   visibility: hidden;
+//   opacity: 0;
 
-  &.isActive {
-    visibility: visible;
-    opacity: 1;
-  }
+//   &.isActive {
+//     visibility: visible;
+//     opacity: 1;
+//   }
 
-  // >= 1280
-  @include minW($macbook-width) {
-    left: em($header-width);
-  }
-}
+//   // >= 1280
+//   @include minW($macbook-width) {
+//     left: em($header-width);
+//   }
+// }

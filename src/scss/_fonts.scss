@@ -3,8 +3,8 @@
   src:
     local('Montserrat Regular'),
     local('Montserrat-Regular'),
-    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-    url('../fonts/Montserrat-Regular.woff') format('woff');
+    url('./fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('./fonts/Montserrat-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,8 +14,8 @@
   src:
     local('Montserrat SemiBold'),
     local('Montserrat-SemiBold'),
-    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
-    url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    url('./fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('./fonts/Montserrat-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
