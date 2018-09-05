@@ -1,0 +1,9 @@
+.Button {
+  padding: 1em 3.5em;
+  font-size: em(15px);
+  color: $color-light;
+  border-radius: em(30px);
+  text-decoration: none;
+  font-family: $ff-default;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,44 @@
+.Navigation {
+  $self: &;
+
+  &.strong {
+    #{$self}-Link:hover {
+      color: $strong-inner;
+    }
+  }
+
+  &-List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: em(30px);
+
+    // >= 1280 && <= 1439
+    // @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
+    //   margin-top: 0;
+    // }
+  }
+
+  &-Item {
+    min-width: em(170px);
+    margin: em(5px) 0;
+    border-bottom: 1px solid rgba($color-light, 0.3);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    // >= 1280 && <= 1439
+    // @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
+    //   margin: 0;
+    // }
+  }
+
+  &-Link {
+    padding: em(23px) 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-light;
+    transition: all 0.3s ease;
+  }
+}

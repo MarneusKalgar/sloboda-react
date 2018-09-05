@@ -1,0 +1,43 @@
+.Socials {
+  $self: &;
+
+  &.strong {
+    #{$self}-Btn:hover svg {
+      fill: $strong-inner;
+    }
+  }
+
+  &-List {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &-Item {
+    margin: 0 em(30px);
+
+    // >= 1280
+    //@include minW($macbook-width) {
+    //  margin-left: em(15px);
+    //  margin-right: em(15px);
+    //}
+  }
+
+  &-Btn {
+    display: block;
+    @include size(em(25px), em(25px));
+
+    svg {
+      display: block;
+      @include size(100%, 100%);
+      fill: $color-light;
+      transition: fill 0.3s ease;
+    }
+
+    // >= 1280
+    // @include minW($macbook-width) {
+    //   @include size(em(20px), em(20px));
+    // }
+  }
+}

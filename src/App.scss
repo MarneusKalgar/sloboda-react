@@ -16,14 +16,14 @@
 @import "scss/common";
 
 // // Blocks
-// // @import "scss/blocks/btn";
+@import "components/Button/Button";
 // // @import "scss/blocks/shops";
 // // @import "scss/blocks/logo";
-// // @import "scss/blocks/socials";
+@import "components/Socials/Socials";
 // // @import "scss/blocks/langs";
-// // @import "scss/blocks/burger";
+@import "components/Burger/Burger";
+@import "components/Navigation/Navigation";
 @import "components/Header/Header";
-// // @import "scss/blocks/nav";
 // // @import "scss/blocks/hero";
 // // @import "scss/blocks/glide";
 // // @import "scss/blocks/products";

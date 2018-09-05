@@ -1,0 +1,39 @@
+.Burger {
+  $self: &;
+
+  position: relative;
+  @include size(em(45px), em(45px));
+  background-color: $color-light;
+  border-radius: 50%;
+
+  &.isActive {
+    #{$self}-Icon_burger {
+      opacity: 0;
+    }
+
+    #{$self}-Icon_close {
+      opacity: 1;
+    }
+  }
+
+  &-Icon {
+    @include position(absolute, 50% null null 50%);
+    transform: translate(-50%, -50%);
+    fill: none;
+    stroke: #000;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    pointer-events: none;
+    opacity: 0;
+
+    &_burger {
+      opacity: 1;
+    }
+
+    &_close {
+      opacity: 0;
+    }
+  }
+}

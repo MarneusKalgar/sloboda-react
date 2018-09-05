@@ -1,122 +1,122 @@
-// .Header {
-//   $self: &;
+.Header {
+  $self: &;
 
-//   color: $color-text;
-//   text-align: center;
+  color: $color-text;
+  text-align: center;
 
-//   // >= 1280
-//   //@include minW($macbook-width) {
-//   //  border-right: 1px solid rgba($color-light, 0.5);
-//   //  box-shadow: 5px 0 35px -5px rgba($color-dark, 0.4)
-//   //}
+  // >= 1280
+  //@include minW($macbook-width) {
+  //  border-right: 1px solid rgba($color-light, 0.5);
+  //  box-shadow: 5px 0 35px -5px rgba($color-dark, 0.4)
+  //}
 
-//   &-Burger {
-//     @include position(absolute, 50% em($pad-mob) null null );
-//     z-index: 2;
-//     transform: translate(0, -50%);
+  &-Burger {
+    @include position(absolute, 50% em($pad-mob) null null );
+    z-index: 2;
+    transform: translate(0, -50%);
 
-//     // >= 768
-//     @include minW($macbook-width) {
-//       display: none;
-//     }
-//   }
+    // >= 768
+    @include minW($macbook-width) {
+      display: none;
+    }
+  }
 
-//   &-Wrap {
-//     @include position(absolute, 0 null null 0);
-//     z-index: 1;
-//     @include size(100vw, 100vh);
-//     padding: 9vh 0 em(20px);
-//     transform-origin: 0 0;
-//     transform: scale(0);
-//     visibility: hidden;
-//     transition: transform 0.4s ease, background-color 0.8s ease;
-//     overflow-y: auto;
+  &-Wrap {
+    @include position(absolute, 0 null null 0);
+    z-index: 1;
+    @include size(100vw, 100vh);
+    padding: 9vh 0 em(20px);
+    transform-origin: 0 0;
+    transform: scale(0);
+    visibility: hidden;
+    transition: transform 0.4s ease, background-color 0.8s ease;
+    overflow-y: auto;
 
-//     &.isActive {
-//       transform: scale(1);
-//       visibility: visible;
-//     }
+    &_active {
+      transform: scale(1);
+      visibility: visible;
+    }
 
-//     // >= 1280
-//     @include minW($macbook-width) {
-//       @include size(100%, 100%);
-//       padding-top: em(30px);
-//       transform: scale(1);
-//       visibility: visible;
-//       opacity: 1;
-//       //transition: background-color 1s ease;
-//       transition: none;
-//       overflow: hidden;
-//       background-color: $strong;
-//     }
+    // >= 1280
+    // @include minW($macbook-width) {
+    //   @include size(100%, 100%);
+    //   padding-top: em(30px);
+    //   transform: scale(1);
+    //   visibility: visible;
+    //   opacity: 1;
+    //   //transition: background-color 1s ease;
+    //   transition: none;
+    //   overflow: hidden;
+    //   background-color: $strong;
+    // }
 
-//     // >= 1440
-//     @include minW($laptop-lg-width) {
-//       padding-top: 10vh;
-//     }
-//   }
+    // >= 1440
+    // @include minW($laptop-lg-width) {
+    //   padding-top: 10vh;
+    // }
+  }
 
-//   &-Logo {
-//     &_outer {
-//       @include position(absolute, 50% null null em($pad-mob));
-//       z-index: 1;
-//       width: em(125px);
-//       transform: translate(0, -50%);
-//     }
+  &-Logo {
+    &_outer {
+      @include position(absolute, 50% null null em($pad-mob));
+      z-index: 1;
+      width: em(125px);
+      transform: translate(0, -50%);
+    }
 
-//     &.isHidden {
-//       opacity: 0;
-//       visibility: hidden;
-//     }
+    &.isHidden {
+      opacity: 0;
+      visibility: hidden;
+    }
 
-//     // >= 768 && <= 1023
-//     @media screen and (min-width: $tablet-width) and (max-width: $ipad-width - 1px) {
-//       &_outer {
-//         width: em(125px * 1.3);
-//       }
-//     }
+    // >= 768 && <= 1023
+    @media screen and (min-width: $tablet-width) and (max-width: $ipad-width - 1px) {
+      &_outer {
+        width: em(125px * 1.3);
+      }
+    }
 
-//     // >= 1280
-//     @include minW($macbook-width) {
-//       &_outer {
-//         display: none;
-//       }
+    // >= 1280
+    // @include minW($macbook-width) {
+    //   &_outer {
+    //     display: none;
+    //   }
 
-//       &.isHidden {
-//         opacity: 1;
-//         visibility: visible;
-//       }
-//     }
-//   }
+    //   &.isHidden {
+    //     opacity: 1;
+    //     visibility: visible;
+    //   }
+    // }
+  }
 
-//   &-Btn {
-//     margin: em(30px) 0 0;
+  &-Btn {
+    margin: em(30px) 0 0;
 
-//     // >= 1280
-//     @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
-//       margin-top: em(5px);
-//     }
-//   }
+    // >= 1280
+    // @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
+    //   margin-top: em(5px);
+    // }
+  }
 
-//   &-Socials {
-//     margin: em(50px) auto 0;
+  &-Socials {
+    margin: em(50px) auto 0;
 
-//     // >= 1280
-//     @include minW($macbook-width) {
-//       @include position(absolute, null null em(40px) 50%);
-//       margin: 0;
-//       transform: translate(-50%, 0);
-//     }
-//   }
+    // >= 1280
+    // @include minW($macbook-width) {
+    //   @include position(absolute, null null em(40px) 50%);
+    //   margin: 0;
+    //   transform: translate(-50%, 0);
+    // }
+  }
 
-//   // &-Langs {
-//   //   margin: em(25px) auto 0;
-// // 
-//   //   // >= 1280
-//   //   @include minW($macbook-width) {
-//   //     @include position(absolute, null null em(90px) 50%);
-//   //     margin: 0;
-//   //     transform: translate(-50%, 0);
-//   //   }
-//   // }
-// }
+  // &-Langs {
+  //   margin: em(25px) auto 0;
+// 
+  //   // >= 1280
+  //   @include minW($macbook-width) {
+  //     @include position(absolute, null null em(90px) 50%);
+  //     margin: 0;
+  //     transform: translate(-50%, 0);
+  //   }
+  // }
+}
