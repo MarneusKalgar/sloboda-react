@@ -1,5 +1,3 @@
-
-
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
@@ -12,7 +10,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// require('bourbon');
+// const bourbon = require('bourbon');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -201,7 +199,18 @@ module.exports = {
             exclude: /node_modules/,
             use: ExtractTextPlugin.extract({
               fallback: 'style-loader',
-              use: ['css-loader', 'sass-loader']
+              use: [
+                {
+                  loader: 'css-loader'
+                },
+                {
+                  loader: 'sass-loader',
+                  options: {
+                    sourceMap: true,
+                    // includePaths: [require('bourbon').includePaths]
+                  }
+                }
+              ]
             })
           },
           {

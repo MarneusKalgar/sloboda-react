@@ -34,18 +34,18 @@ body {
   background-color: $strong;
   overflow: hidden;
 
-  //&::after {
-  //  @supports(filter: blur(40px)) {
-  //    content: '';
-  //    @include position(absolute, null -50vw -50vw null);
-  //    @include size(100vw, 100vw);
-  //    background-color: $strong-inner;
-  //    border-radius: 50%;
-  //    filter: blur(40px);
-  //    opacity: 0.1;
-  //    pointer-events: none;
-  //  }
-  //}
+  &::after {
+    @supports(filter: blur(40px)) {
+      content: '';
+      @include position(absolute, null -50vw -50vw null);
+      @include size(100vw, 100vw);
+      background-color: $strong-inner;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  }
 
 
 //   // >= 1280

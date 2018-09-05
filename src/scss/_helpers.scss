@@ -12,17 +12,17 @@
   @return pct($target, $context);
 }
 
-// @mixin no-selection {
-//   &::-moz-selection {
-//     background: transparent;
-//     text-shadow: none;
-//   }
+@mixin no-selection {
+  &::-moz-selection {
+    background: transparent;
+    text-shadow: none;
+  }
 
-//   &::selection {
-//     background: transparent;
-//     text-shadow: none;
-//   }
-// }
+  &::selection {
+    background: transparent;
+    text-shadow: none;
+  }
+}
 
 @mixin placeholder-styling { color: rgba(153, 153, 153, 0.5) !important; @include opacity(100); }
 
