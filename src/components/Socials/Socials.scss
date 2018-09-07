@@ -30,7 +30,7 @@
 
     svg {
       display: block;
-      @include size(100%, 100%);
+      @include size(em(25px), em(25px));
       fill: $color-light;
       transition: fill 0.3s ease;
     }

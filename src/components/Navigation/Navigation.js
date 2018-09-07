@@ -1,20 +1,5 @@
 import React from 'react';
 
-const items = [
-  {
-    key: 0,
-    name: 'О бренде'
-  },
-  {
-    key: 1,
-    name: 'Продукция'
-  },
-  {
-    key: 2,
-    name: 'Контакты'
-  }
-];
-
 const navigation = props => {
   const blockName = 'Navigation';
   const classNames = `${blockName} ${props.classes}`;
@@ -22,10 +7,10 @@ const navigation = props => {
   return (
     <nav className={classNames}>
       <ul className={`${blockName}-List`}>
-        {items.map(item => {
+        {props.links.map(link => {
           return (
-            <li className={`${blockName}-Item`} key={item.key}>
-              <a className={`${blockName}-Link`} href="#">{item.name}</a>
+            <li className={`${blockName}-Item`} key={link.key}>
+              <a className={`${blockName}-Link`} href="#">{link.name}</a>
             </li>
           );
         })}
