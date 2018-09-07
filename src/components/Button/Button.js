@@ -1,7 +1,7 @@
 import React from 'react';
 
 const button = props => {
-  const blockName = 'Btn';
+  const blockName = 'Button';
   const classNames = `${blockName} ${props.classes}`;
   let button = null;
 

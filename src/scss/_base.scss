@@ -2,7 +2,7 @@ html {
   background: #fff;
   font-family: $ff-default;
   font-size: $font-size-default;
-  line-height: 1.123;
+  line-height: 1.2;
   color: $color-text;
   cursor: default;
   text-size-adjust: none;
@@ -51,6 +51,12 @@ label {
 }
 
 input,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+input,
 textarea {
   border-radius: 0;
 
@@ -93,9 +99,9 @@ svg {
 }
 
 button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  // display: inline-flex;
+  // justify-content: center;
+  // align-items: center;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -104,16 +110,16 @@ button {
   cursor: pointer;
 }
 
-a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
+// a {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-a,
-button {
-  &:hover,
-  &:active {
-    outline: none;
-  }
-}
+// a,
+// button {
+//   &:hover,
+//   &:active {
+//     outline: none;
+//   }
+// }

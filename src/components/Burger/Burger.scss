@@ -2,6 +2,9 @@
   $self: &;
 
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include size(em(45px), em(45px));
   background-color: $color-light;
   border-radius: 50%;

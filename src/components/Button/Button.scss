@@ -1,9 +1,15 @@
 .Button {
-  padding: 1em 3.5em;
-  font-size: em(15px);
-  color: $color-light;
+  padding: 1em 3.5em;  
   border-radius: em(30px);
   text-decoration: none;
+  font-size: em(16px);
   font-family: $ff-default;
+  color: $color-light;
+  border-width: 1px;
+  border-style: solid;
   transition: all 0.3s ease;
+
+  &_light {
+    border-color: $color-light;
+  }
 }

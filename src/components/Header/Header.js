@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 
 export class Header extends Component {
   state = {
-    menuOpened: false
+    menuOpened: true
   };
 
   menuToggleHandler = () => {
@@ -38,7 +38,7 @@ export class Header extends Component {
         <div className={wrapClass}>
           <Logo config='inner' classes={`${blockName}-Logo ${blockName}-Logo_inner`} />
           <Navigation classes={`${blockName}-Nav`} />
-          <Button config='button' classes={`${blockName}-Btn`}>Купить</Button>
+          <Button config='button' classes={`Button_light ${blockName}-Btn`}>Купить</Button>
           <Socials />
 
           {/* <button className="btn btn--light header__btn toggle-shops" type="button">Купить</button> */}

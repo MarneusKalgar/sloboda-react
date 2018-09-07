@@ -16,7 +16,7 @@ const items = [
 ];
 
 const navigation = props => {
-  const blockName = 'Nav';
+  const blockName = 'Navigation';
   const classNames = `${blockName} ${props.classes}`;
 
   return (

@@ -131,3 +131,8 @@ body {
     left: em($header-width);
   }
 }
+
+button,
+input {
+  font-family: $ff-default;
+}
