@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactSVG from 'react-svg';
+import cn from 'classnames';
 
 const burger = props => {
   const blockName = 'Burger';
-  const closed = <ReactSVG src="svg/menu.svg" svgStyle={{ width: 25, height: 25 }} />;
-  const opened = <ReactSVG src="svg/close.svg" svgStyle={{ width: 25, height: 20 }} />;
+  const classes = cn(`${blockName}`, props.classes, {
+    [`${blockName}_clicked`]: !props.opened
+  });
 
   return (
-    <button className={`${blockName} ${props.classes}`} type="button" onClick={props.clicked}>
-      {props.opened ? closed : opened}
+    <button className={classes} type="button" onClick={props.clicked}>
+      <ReactSVG
+        src="svg/menu.svg"
+        svgStyle={{ width: 25, height: 25 }}
+        svgClassName={`${blockName}-Icon ${blockName}-Icon_burger`}
+      />
+      <ReactSVG
+        src="svg/close.svg"
+        svgStyle={{ width: 25, height: 20 }}
+        svgClassName={`${blockName}-Icon ${blockName}-Icon_close`}
+      />
     </button>
   )
 }
