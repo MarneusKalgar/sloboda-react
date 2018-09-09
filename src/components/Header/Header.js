@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import cn from 'classnames';
+
 import Logo from '../Logo/Logo';
 import Burger from '../Burger/Burger';
 import Navigation from '../Navigation/Navigation';
@@ -51,11 +53,14 @@ export class Header extends Component {
 
   render() {
     const blockName = 'Header';
+    const wrapClass = cn(`${blockName}-Wrap`, {
+      [`${blockName}-Wrap_active`]: this.state.menuOpened
+    });
 
     return (
       <header className={`${blockName} App-${blockName}`}>
 
-        <Logo 
+        <Logo
           config='outer'
           classes={`${blockName}-Logo ${blockName}-Logo_outer`}
         />
@@ -66,20 +71,20 @@ export class Header extends Component {
           opened={!this.state.menuOpened}
         />
 
-        <div className={this.state.menuOpened ? `${blockName}-Wrap ${blockName}-Wrap_active` : `${blockName}-Wrap`}>
-          <Logo 
-            config='inner' 
+        <div className={wrapClass}>
+          <Logo
+            config='inner'
             classes={`${blockName}-Logo ${blockName}-Logo_inner`}
           />
-          <Navigation 
+          <Navigation
             classes={`${blockName}-Nav`}
             links={navLinks}
           />
-          <Button 
+          <Button
             config='button'
             classes={`Button_light ${blockName}-Btn`}
           >Купить</Button>
-          <Socials 
+          <Socials
             classes={`${blockName}-Socials`}
             links={socialLinks}
           />
