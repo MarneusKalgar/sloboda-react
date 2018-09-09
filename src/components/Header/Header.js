@@ -41,9 +41,13 @@ const socialLinks = [
 ];
 
 export class Header extends Component {
-  state = {
-    menuOpened: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      menuOpened: false
+    };
+  }
 
   menuToggleHandler = () => {
     this.setState(prevState => {

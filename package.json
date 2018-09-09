@@ -39,6 +39,7 @@
     "react": "^16.4.2",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.4.2",
+    "react-slick": "^0.23.1",
     "react-svg": "^6.0.6",
     "resolve": "1.6.0",
     "sass-loader": "^7.1.0",
