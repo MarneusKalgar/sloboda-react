@@ -5,8 +5,12 @@ const button = props => {
   const classNames = `${blockName} ${props.classes}`;
   let button = null;
 
-  if (props.config === 'button') {
-    button = <button className={classNames} type="button">{props.children}</button>;
+  switch (props.config) {
+    case 'button':
+      button = <button className={classNames} style={props.style} type="button">{props.children}</button>;
+      break;
+    default:
+      button = null;
   }
 
   return button;

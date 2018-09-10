@@ -2,17 +2,19 @@
   $self: &;
 
   &-Slider {
+    @include size(100%, 100%);
     overflow: hidden;
   }
 
   &-Slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    //position: absolute;
+    // top: 0;
+    // left: 0;
     z-index: 0;
     min-height: 100vh;
     width: 100%;
-    opacity: 0;
+    //opacity: 0;
     padding-bottom: em(45px);
     transition: background-color 0.5s ease, opacity 1s ease;
     overflow: hidden;
@@ -321,6 +323,7 @@
 
   &-Btn {
     font-weight: 600;
+    border: 0;
 
     // >= 1900
     //@include minW($full-hd-width) {

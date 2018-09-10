@@ -13,10 +13,6 @@ body {
 }
 
 .App {
-  width: 100vw;
-  height: 100vh;
-
-  background-color: $strong;
 
   &-Header {
     @include position(fixed, 0 null null 0);
@@ -121,7 +117,7 @@ body {
   visibility: hidden;
   opacity: 0;
 
-  &.isActive {
+  &_active {
     visibility: visible;
     opacity: 1;
   }

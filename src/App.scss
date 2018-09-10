@@ -3,8 +3,8 @@
 @import "~bourbon/core/bourbon";
 
 // // Vendor deps
-//@import "scss/vendors";
-// @include normalize();
+@import "scss/vendors";
+@include normalize();
 
 // // Authored Dependencies
 @import "scss/variables";
