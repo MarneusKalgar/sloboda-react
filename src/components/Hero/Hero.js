@@ -3,6 +3,7 @@ import Slider from "react-slick";
 // import cn from 'classnames';
 
 import HeroSlide from './HeroSlide/HeroSlide';
+import TasteSlider from '../TasteSlider/TasteSlider';
 
 const heroSlides = [
   {
@@ -59,6 +60,7 @@ export class Hero extends Component {
             return <HeroSlide key={slide.id} blockName={blockName} data={slide.data} />
           })}
         </Slider>
+        <TasteSlider className={`${blockName}-Tastes`} />
       </section>
     );
   }

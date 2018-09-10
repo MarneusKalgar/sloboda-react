@@ -221,7 +221,7 @@
     //}
   }
 
-  &-Glide {
+  &-Tastes {
     @include position(absolute, calc(100vmax - 24vmax - 94px) null null 50%);
     z-index: 3;
     width: calc(100% - #{em(2 * 20px)});
