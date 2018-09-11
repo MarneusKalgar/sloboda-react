@@ -11,12 +11,12 @@ const burger = props => {
   return (
     <button className={classes} type="button" onClick={props.clicked}>
       <ReactSVG
-        src="svg/menu.svg"
+        src='svg/menu.svg'
         svgStyle={{ width: 25, height: 25 }}
         svgClassName={`${blockName}-Icon ${blockName}-Icon_burger`}
       />
       <ReactSVG
-        src="svg/close.svg"
+        src='svg/close.svg'
         svgStyle={{ width: 25, height: 20 }}
         svgClassName={`${blockName}-Icon ${blockName}-Icon_close`}
       />

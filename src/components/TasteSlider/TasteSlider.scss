@@ -253,25 +253,21 @@
       fill: $color-light;
     }
 
-    &--left {
+    &_prev {
       left: em(-5px);
-
-      svg {
-        transform: rotateZ(180deg);
-      }
     }
 
-    &--right {
+    &_next {
       right: em(-5px);
     }
 
     // >= 768
     @include minW($tablet-width) {
-      &--left {
+      &_prev {
         left: em(5px);
       }
 
-      &--right {
+      &_next {
         right: em(5px);
       }
     }

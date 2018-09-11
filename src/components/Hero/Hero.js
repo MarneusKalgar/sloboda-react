@@ -3,7 +3,7 @@ import Slider from "react-slick";
 // import cn from 'classnames';
 
 import HeroSlide from './HeroSlide/HeroSlide';
-import TasteSlider from '../TasteSlider/TasteSlider';
+import { TasteSlider } from '../TasteSlider/TasteSlider';
 
 const heroSlides = [
   {
@@ -34,6 +34,16 @@ const heroSlides = [
       img: 'img/Hero/caramel-desk.png',
       first: 'img/Hero/caramel-first.png',
       product: 'img/Products/caramel-product.png'
+    }
+  },
+  {
+    id: 3,
+    data: {
+      bgColor: '#ba1e0d',
+      btnColor: '#9c0006',
+      img: 'img/Hero/strong-desk.png',
+      first: 'img/Hero/strong-first.png',
+      product: 'img/Products/strong-product.png'
     }
   }
 ];

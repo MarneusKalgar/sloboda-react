@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Slider from "react-slick";
 
 import TasteSlide from './TasteSlide/TasteSlide';
+import { NextArrow } from './TasteArrows/TasteArrows';
+import { PrevArrow } from './TasteArrows/TasteArrows';
+import button from '../Button/Button';
 
 const tasteSlides = [
   {
@@ -24,26 +27,36 @@ const tasteSlides = [
       flavor: 'img/TasteSlider/caramel-icon.png',
       glow: 'img/TasteSlider/caramel-glow.png'
     }
+  },
+  {
+    id: 3,
+    data: {
+      flavor: 'img/TasteSlider/classic-icon.png',
+      glow: 'img/TasteSlider/classic-glow.png'
+    }
   }
 ];
 
-const tasteSlider = props => {
-  const blockName = 'TasteSlider';
-  const sliderSettings = {
-    infinite: true,
-    speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    className: `${blockName} ${props.className}`
-  };
+export class TasteSlider extends Component {
 
-  return (
-    <Slider {...sliderSettings}>
-      {tasteSlides.map(slide => {
-        return <TasteSlide key={slide.id} blockName={blockName} data={slide.data} />
-      })}
-    </Slider>
-  );
+  render() {
+    const blockName = 'TasteSlider';
+    const sliderSettings = {
+      infinite: true,
+      speed: 700,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      className: `${blockName} ${this.props.className}`,
+      nextArrow: <NextArrow blockName={blockName} />,
+      prevArrow: <PrevArrow blockName={blockName} />
+    };
+
+    return (
+      <Slider {...sliderSettings}>
+        {tasteSlides.map(slide => {
+          return <TasteSlide key={slide.id} blockName={blockName} data={slide.data} />
+        })}
+      </Slider>
+    );
+  }
 };
-
-export default tasteSlider;
