@@ -59,8 +59,12 @@ export class Hero extends Component {
 
   componentDidMount() {
     this.setState({
-      heroSlider: this.heroSlider
+      heroSlider: this.slider
     })
+  }
+
+  toggleNext = () => {
+    this.slider.slickNext();
   }
 
   render() {
@@ -70,7 +74,7 @@ export class Hero extends Component {
       draggable: false,
       fade: true,
       infinite: true,
-      speed: 700,
+      speed: 600,
       slidesToShow: 1,
       slidesToScroll: 1,
       className: `${blockName}-Slider`
@@ -78,12 +82,12 @@ export class Hero extends Component {
 
     return (
       <section className={`${blockName} Section`}>
-        <Slider {...sliderSettings} ref={slider => (this.heroSlider = slider)}>
+        <Slider {...sliderSettings} ref={slider => (this.slider = slider)}>
           {heroSlides.map(slide => {
-            return <HeroSlide key={slide.id} blockName={blockName} data={slide.data} />
+            return <HeroSlide key={slide.id} blockName={blockName} data={slide.data} clicked={this.toggleNext} />
           })}
         </Slider>
-        <TasteSlider className={`${blockName}-Tastes`} sliderRef={this.state.heroSlider} />
+        <TasteSlider className={`${blockName}-Tastes`} navFor={this.state.heroSlider} />
       </section>
     );
   }

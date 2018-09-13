@@ -9,7 +9,11 @@ const heroSlide = props => {
         <div className={`${props.blockName}-Img`} style={{ backgroundImage: `url(${props.data.img})` }}></div>
         <div className={`${props.blockName}-First`} style={{ backgroundImage: `url(${props.data.first})` }}></div>
         <div className={`${props.blockName}-Product`} style={{ backgroundImage: `url(${props.data.product})` }}></div>
-        <button className={`${props.blockName}-Next`} style={{ backgroundColor: `${props.data.btnColor}` }}>
+        <button
+          className={`${props.blockName}-Next`}
+          style={{ backgroundColor: `${props.data.btnColor}` }}
+          onClick={props.clicked}
+        >
           <ReactSVG src='svg/next.svg' svgStyle={{ width: 16, height: 20 }} />
         </button>
       </div>

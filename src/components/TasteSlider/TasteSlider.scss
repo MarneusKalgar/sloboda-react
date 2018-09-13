@@ -1,6 +1,6 @@
 .TasteSlider {
   $self: &;
-  
+
 
   // >= 1280
   //@include minW($macbook-width) {
@@ -54,10 +54,14 @@
       opacity: 0.8;
     }
   }
+  // .slick-track {
+  //   left: 100px;
+  // }
 
   &-Slide {
     position: relative;
     @include size(em(100px), em(140px));
+    margin: 0 auto;
     cursor: pointer;
     //pointer-events: none;
 

@@ -7,7 +7,13 @@ const button = props => {
 
   switch (props.config) {
     case 'button':
-      button = <button className={classNames} style={props.style} type="button">{props.children}</button>;
+      button = (
+        <button
+          className={classNames}
+          style={props.style}
+          onClick={props.clicked}
+          type="button"
+        >{props.children}</button>);
       break;
     default:
       button = null;

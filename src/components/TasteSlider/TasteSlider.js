@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import TasteSlide from './TasteSlide/TasteSlide';
 import { NextArrow } from './TasteArrows/TasteArrows';
 import { PrevArrow } from './TasteArrows/TasteArrows';
-import button from '../Button/Button';
 
 const tasteSlides = [
   {
@@ -57,13 +56,14 @@ export class TasteSlider extends Component {
     const blockName = 'TasteSlider';
     const sliderSettings = {
       infinite: true,
-      speed: 700,
+      speed: 600,
       slidesToShow: 3,
       slidesToScroll: 1,
+      easing: 'ease',
       className: `${blockName} ${this.props.className}`,
       nextArrow: <NextArrow blockName={blockName} />,
       prevArrow: <PrevArrow blockName={blockName} />,
-      asNavFor: this.props.sliderRef
+      asNavFor: this.props.navFor
     };
 
     return (
