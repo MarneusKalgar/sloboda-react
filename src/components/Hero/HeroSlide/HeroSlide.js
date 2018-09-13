@@ -1,13 +1,17 @@
 import React from 'react';
 import Button from '../../Button/Button';
+import ReactSVG from 'react-svg';
 
 const heroSlide = props => {
   return (
-    <div className={`${props.blockName}-Slide`} style={{ background: `${props.data.bgColor}` }}>
+    <div className={`${props.blockName}-Slide`} style={{ backgroundColor: `${props.data.bgColor}` }}>
       <div className={`${props.blockName}-Wrap`}>
         <div className={`${props.blockName}-Img`} style={{ backgroundImage: `url(${props.data.img})` }}></div>
         <div className={`${props.blockName}-First`} style={{ backgroundImage: `url(${props.data.first})` }}></div>
         <div className={`${props.blockName}-Product`} style={{ backgroundImage: `url(${props.data.product})` }}></div>
+        <button className={`${props.blockName}-Next`} style={{ backgroundColor: `${props.data.btnColor}` }}>
+          <ReactSVG src='svg/next.svg' svgStyle={{ width: 16, height: 20 }} />
+        </button>
       </div>
       <div className={`${props.blockName}-Text`}>
         <h2 className={`${props.blockName}-Title`}>для каждого своя!</h2>

@@ -45,8 +45,6 @@ export class TasteSlider extends Component {
     this.state = {
       tasteSlider: null
     };
-
-    // this.slider = React.createRef();
   }
 
   componentDidMount() {

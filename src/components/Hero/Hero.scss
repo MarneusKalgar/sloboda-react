@@ -192,9 +192,17 @@
   &-Next {
     @include position(absolute, null calc(50% - #{em(100px)}) 22vmax null);
     z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include size(em(50px), em(50px));
+    border-radius: 50%;
     pointer-events: auto;
     transition: background-color 0.3s ease;
+
+    svg {
+      fill: $color-light;
+    }
 
     // >= 768
     @include minW($tablet-width) {

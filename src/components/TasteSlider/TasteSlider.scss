@@ -1,5 +1,6 @@
 .TasteSlider {
   $self: &;
+  
 
   // >= 1280
   //@include minW($macbook-width) {
@@ -46,6 +47,13 @@
   //     @include size(100%, 100%);
   //   }
   // }
+  .slick-current {
+    pointer-events: none;
+
+    #{$self}-Glow {
+      opacity: 0.8;
+    }
+  }
 
   &-Slide {
     position: relative;
@@ -53,17 +61,13 @@
     cursor: pointer;
     //pointer-events: none;
 
-    &--active {
-      pointer-events: none;
+    // &.slick-active {
+    //   pointer-events: none;
 
-      #{$self}__glow {
-        opacity: 0.8;
-      }
-
-      //#{$self}__icon::before {
-      //  opacity: 0.8;
-      //}
-    }
+    //   #{$self}-Glow {
+    //     opacity: 0.8;
+    //   }
+    // }
 
     // >= 1280
     // @include minW($macbook-width) {
