@@ -39,6 +39,22 @@ const tasteSlides = [
 
 export class TasteSlider extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tasteSlider: null
+    };
+
+    // this.slider = React.createRef();
+  }
+
+  componentDidMount() {
+    this.setState({
+      tasteSlider: this.tasteSlider
+    })
+  }
+
   render() {
     const blockName = 'TasteSlider';
     const sliderSettings = {
@@ -48,11 +64,15 @@ export class TasteSlider extends Component {
       slidesToScroll: 1,
       className: `${blockName} ${this.props.className}`,
       nextArrow: <NextArrow blockName={blockName} />,
-      prevArrow: <PrevArrow blockName={blockName} />
+      prevArrow: <PrevArrow blockName={blockName} />,
+      asNavFor: this.props.sliderRef
     };
 
     return (
-      <Slider {...sliderSettings}>
+      <Slider
+        {...sliderSettings}
+        ref={slider => (this.tasteSlider = slider)}
+      >
         {tasteSlides.map(slide => {
           return <TasteSlide key={slide.id} blockName={blockName} data={slide.data} />
         })}
