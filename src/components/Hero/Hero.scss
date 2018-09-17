@@ -4,6 +4,7 @@
   &-Slider {
     @include size(100%, 100%);
     overflow: hidden;
+    pointer-events: none;
   }
 
   &-Slide {
@@ -307,7 +308,7 @@
 
     span {
       &::after {
-        content: '\270C';
+        content: "\270C";
         margin-left: em(3px);
       }
     }
