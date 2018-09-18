@@ -65,9 +65,9 @@ export class Hero extends Component {
     });
   }
 
-  // toggleNext = () => {
-  //   this.heroSlider.slickNext();
-  // };
+  toggleNext = () => {
+    this.heroSlider.slickNext();
+  };
 
   render() {
     const blockName = "Hero";
@@ -92,6 +92,7 @@ export class Hero extends Component {
                 key={slide.id}
                 blockName={blockName}
                 data={slide.data}
+                clicked={this.toggleNext}
               />
             );
           })}
@@ -99,7 +100,7 @@ export class Hero extends Component {
         <TasteSlider
           className={`${blockName}-Tastes`}
           navFor={this.state.heroSlider}
-          sliderMain={this.state.tasteSlider}
+          refProp={slider => (this.tasteSlider = slider)}
         />
       </section>
     );

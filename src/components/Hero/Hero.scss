@@ -4,7 +4,7 @@
   &-Slider {
     @include size(100%, 100%);
     overflow: hidden;
-    pointer-events: none;
+    //pointer-events: none;
   }
 
   &-Slide {

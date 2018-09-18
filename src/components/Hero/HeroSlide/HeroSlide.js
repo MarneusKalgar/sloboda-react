@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../Button/Button";
-// import ReactSVG from "react-svg";
+import ReactSVG from "react-svg";
 
 const heroSlide = props => {
   return (
@@ -21,13 +21,13 @@ const heroSlide = props => {
           className={`${props.blockName}-Product`}
           style={{ backgroundImage: `url(${props.data.product})` }}
         />
-        {/* <button
+        <button
           className={`${props.blockName}-Next`}
           style={{ backgroundColor: `${props.data.btnColor}` }}
           onClick={props.clicked}
         >
-          <ReactSVG src='svg/next.svg' svgStyle={{ width: 16, height: 20 }} />
-        </button> */}
+          <ReactSVG src="svg/next.svg" svgStyle={{ width: 16, height: 20 }} />
+        </button>
       </div>
       <div className={`${props.blockName}-Text`}>
         <h2 className={`${props.blockName}-Title`}>для каждого своя!</h2>

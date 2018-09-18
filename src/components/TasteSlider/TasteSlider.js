@@ -37,20 +37,6 @@ const tasteSlides = [
 ];
 
 export class TasteSlider extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tasteSlider: null
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      tasteSlider: this.tasteSlider
-    });
-  }
-
   render() {
     const blockName = "TasteSlider";
     const sliderSettings = {
@@ -66,7 +52,7 @@ export class TasteSlider extends Component {
     };
 
     return (
-      <Slider {...sliderSettings} ref={slider => (this.tasteSlider = slider)}>
+      <Slider {...sliderSettings} ref={this.props.refProp}>
         {tasteSlides.map(slide => {
           return (
             <TasteSlide
