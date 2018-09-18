@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
-import TasteSlide from "./TasteSlide/TasteSlide";
+import { TasteSlide } from "./TasteSlide/TasteSlide";
 import { NextArrow } from "./TasteArrows/TasteArrows";
 import { PrevArrow } from "./TasteArrows/TasteArrows";
 
