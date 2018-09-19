@@ -101,7 +101,7 @@ export class Hero extends Component {
         <TasteSlider
           className={`${blockName}-Tastes`}
           navFor={this.state.heroSlider}
-          refProp={slider => (this.tasteSlider = slider)}
+          ref={slider => (this.tasteSlider = slider)}
         />
       </section>
     );

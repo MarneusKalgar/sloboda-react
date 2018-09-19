@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import { TasteSlide } from "./TasteSlide/TasteSlide";
-import { NextArrow } from "./TasteArrows/TasteArrows";
-import { PrevArrow } from "./TasteArrows/TasteArrows";
+import { NextArrow, PrevArrow } from "./TasteArrows/TasteArrows";
 
 const tasteSlides = [
   {
@@ -36,33 +35,27 @@ const tasteSlides = [
   }
 ];
 
-export class TasteSlider extends Component {
-  render() {
-    const blockName = "TasteSlider";
-    const sliderSettings = {
-      infinite: true,
-      speed: 600,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      easing: "ease",
-      className: `${blockName} ${this.props.className}`,
-      nextArrow: <NextArrow blockName={blockName} />,
-      prevArrow: <PrevArrow blockName={blockName} />,
-      asNavFor: this.props.navFor
-    };
+export const TasteSlider = React.forwardRef((props, ref) => {
+  const blockName = "TasteSlider";
+  const sliderSettings = {
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    easing: "ease",
+    className: `${blockName} ${props.className}`,
+    nextArrow: <NextArrow blockName={blockName} />,
+    prevArrow: <PrevArrow blockName={blockName} />,
+    asNavFor: props.navFor
+  };
 
-    return (
-      <Slider {...sliderSettings} ref={this.props.refProp}>
-        {tasteSlides.map(slide => {
-          return (
-            <TasteSlide
-              key={slide.id}
-              blockName={blockName}
-              data={slide.data}
-            />
-          );
-        })}
-      </Slider>
-    );
-  }
-}
+  return (
+    <Slider {...sliderSettings} ref={ref}>
+      {tasteSlides.map(slide => {
+        return (
+          <TasteSlide key={slide.id} blockName={blockName} data={slide.data} />
+        );
+      })}
+    </Slider>
+  );
+});
