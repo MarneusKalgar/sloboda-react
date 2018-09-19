@@ -1,3 +1,11 @@
 .Logo {
   display: inline-block;
+
+  &-Img {
+    // >= 1280
+    @include minW($macbook-width) {
+      width: em(150px);
+      margin: 0 auto;
+    }
+  }
 }

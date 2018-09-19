@@ -14,9 +14,9 @@
     margin-top: em(30px);
 
     // >= 1280 && <= 1439
-    // @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
-    //   margin-top: 0;
-    // }
+    @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
+      margin-top: 0;
+    }
   }
 
   &-Item {
@@ -29,9 +29,9 @@
     }
 
     // >= 1280 && <= 1439
-    // @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
-    //   margin: 0;
-    // }
+    @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
+      margin: 0;
+    }
   }
 
   &-Link {

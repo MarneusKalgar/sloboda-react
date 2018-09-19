@@ -40,15 +40,23 @@ export const TasteSlider = React.forwardRef((props, ref) => {
   const sliderSettings = {
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
     easing: "ease",
-    centerMode: true,
-    centerPadding: "0px",
+    slidesToShow: tasteSlides.length,
     className: `${blockName} ${props.className}`,
     nextArrow: <NextArrow blockName={blockName} />,
     prevArrow: <PrevArrow blockName={blockName} />,
-    asNavFor: props.navFor
+    asNavFor: props.navFor,
+    responsive: [
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "0px"
+        }
+      }
+    ]
   };
 
   return (

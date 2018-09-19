@@ -18,10 +18,10 @@
     margin: 0 em(30px);
 
     // >= 1280
-    //@include minW($macbook-width) {
-    //  margin-left: em(15px);
-    //  margin-right: em(15px);
-    //}
+    @include minW($macbook-width) {
+      margin-left: em(15px);
+      margin-right: em(15px);
+    }
   }
 
   &-Btn {
@@ -36,8 +36,8 @@
     }
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   @include size(em(20px), em(20px));
-    // }
+    @include minW($macbook-width) {
+      @include size(em(20px), em(20px));
+    }
   }
 }

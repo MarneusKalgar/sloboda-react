@@ -5,13 +5,13 @@
   text-align: center;
 
   // >= 1280
-  //@include minW($macbook-width) {
-  //  border-right: 1px solid rgba($color-light, 0.5);
-  //  box-shadow: 5px 0 35px -5px rgba($color-dark, 0.4)
-  //}
+  @include minW($macbook-width) {
+    border-right: 1px solid rgba($color-light, 0.5);
+    box-shadow: 5px 0 35px -5px rgba($color-dark, 0.4);
+  }
 
   &-Burger {
-    @include position(absolute, 50% em($pad-mob) null null );
+    @include position(absolute, 50% em($pad-mob) null null);
     z-index: 2;
     transform: translate(0, -50%);
 
@@ -39,23 +39,23 @@
       visibility: visible;
     }
 
-    // >= 1280
-    // @include minW($macbook-width) {
-    //   @include size(100%, 100%);
-    //   padding-top: em(30px);
-    //   transform: scale(1);
-    //   visibility: visible;
-    //   opacity: 1;
-    //   //transition: background-color 1s ease;
-    //   transition: none;
-    //   overflow: hidden;
-    //   background-color: $strong;
-    // }
+    //>= 1280
+    @include minW($macbook-width) {
+      @include size(100%, 100%);
+      padding-top: em(30px);
+      transform: scale(1);
+      visibility: visible;
+      opacity: 1;
+      //transition: background-color 1s ease;
+      transition: none;
+      overflow: hidden;
+      background-color: $strong;
+    }
 
-    // >= 1440
-    // @include minW($laptop-lg-width) {
-    //   padding-top: 10vh;
-    // }
+    //>= 1440
+    @include minW($laptop-lg-width) {
+      padding-top: 10vh;
+    }
   }
 
   &-Logo {
@@ -79,41 +79,41 @@
     }
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   &_outer {
-    //     display: none;
-    //   }
+    @include minW($macbook-width) {
+      &_outer {
+        display: none;
+      }
 
-    //   &.isHidden {
-    //     opacity: 1;
-    //     visibility: visible;
-    //   }
-    // }
+      &.isHidden {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &-Btn {
     margin: em(30px) 0 0;
 
     // >= 1280
-    // @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
-    //   margin-top: em(5px);
-    // }
+    @media screen and (min-width: $macbook-width) and (max-width: $laptop-lg-width - 1px) {
+      margin-top: em(5px);
+    }
   }
 
   &-Socials {
     margin: em(50px) auto 0;
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   @include position(absolute, null null em(40px) 50%);
-    //   margin: 0;
-    //   transform: translate(-50%, 0);
-    // }
+    @include minW($macbook-width) {
+      @include position(absolute, null null em(40px) 50%);
+      margin: 0;
+      transform: translate(-50%, 0);
+    }
   }
 
   // &-Langs {
   //   margin: em(25px) auto 0;
-// 
+  //
   //   // >= 1280
   //   @include minW($macbook-width) {
   //     @include position(absolute, null null em(90px) 50%);

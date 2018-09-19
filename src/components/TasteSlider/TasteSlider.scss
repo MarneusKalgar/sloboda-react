@@ -1,37 +1,44 @@
 .TasteSlider {
   $self: &;
 
-
   // >= 1280
-  //@include minW($macbook-width) {
-  //  background-position: -1vw 1.5vw;
-  //  background-repeat: no-repeat;
-  //  background-size: 90% 90vh;
-  //}
+  @include minW($macbook-width) {
+    background-position: -1vw 1.5vw;
+    background-repeat: no-repeat;
+    background-size: 90% 90vh;
+  }
 
   // 1280 =< w >= 1281 && h >= 970
-  // @media screen and (min-width: $macbook-width) and (max-width: $macbook-width + 1px) and (min-height: 950px) {
-  //   background-position: -3vw 2.5vw;
-  //   background-size: 95% 75vh;
-  // }
+  @media screen and (min-width: $macbook-width) and (max-width: $macbook-width + 1px) and (min-height: 950px) {
+    background-position: -3vw 2.5vw;
+    background-size: 95% 75vh;
+  }
 
   // >= 1440
-  // @include minW($laptop-lg-width) {
-  //   &__slide:hover {
-  //     #{$self}__icon {
-  //       transform: translate(-50%, -50%) scale(1.2);
-  //     }
-  //   }
-  // }
+  @include minW($laptop-lg-width) {
+    &__slide:hover {
+      #{$self}__icon {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
 
   // >= 1900
-  // @include minW($full-hd-width) {
-  //   &__slide:hover {
-  //     #{$self}__icon {
-  //       transform: translate(-50%, -50%) scale(1.45);
-  //     }
-  //   }
-  // }
+  @include minW($full-hd-width) {
+    &__slide:hover {
+      #{$self}__icon {
+        transform: translate(-50%, -50%) scale(1.45);
+      }
+    }
+  }
+
+  &-Slide {
+    // >= 1280
+    @include minW($macbook-width) {
+      @include position(absolute, 0 null null 0);
+      @include size(100%, 100%);
+    }
+  }
 
   // &__track {
   //   // >= 1280
@@ -47,6 +54,14 @@
   //     @include size(100%, 100%);
   //   }
   // }
+  .slick-track,
+  .slick-list {
+    // >= 1280
+    @include minW($macbook-width) {
+      @include position(absolute, 0 null null 0);
+      @include size(100%, 100%);
+    }
+  }
   .slick-current {
     pointer-events: none;
 
@@ -58,7 +73,7 @@
   //   left: 100px;
   // }
 
-  &-Slide {
+  .slick-slide {
     position: relative;
     @include size(em(100px), em(140px));
     margin: 0 auto;
@@ -74,83 +89,173 @@
     // }
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   position: absolute;
-    //   //pointer-events: auto;
+    @include minW($macbook-width) {
+      position: absolute;
+      //pointer-events: auto;
 
-    //   &:nth-child(1) { top: -1.5vh; right: 14vw; }
-    //   &:nth-child(2) { top: 6vh; right: 8vw; }
-    //   &:nth-child(3) { top: 16vh; right: 4vw; }
-    //   &:nth-child(4) { top: 28vh; right: 1.5vw; }
-    //   &:nth-child(5) { top: 41vh; right: 1vw; }
-    //   &:nth-child(6) { top: 54vh; right: 3vw; }
-    //   &:nth-child(7) { top: 67vh; right: 7vw; }
-    //   &:nth-child(8) { top: 77vh; right: 13vw; }
-    //   &:nth-child(9) { top: 80.5vh; right: 20vw; }
-    //   &:nth-child(10) { top: 80vh; right: 28vw; }
+      &:nth-child(1) {
+        top: -1.5vh;
+        right: 14vw;
+      }
+      &:nth-child(2) {
+        top: 6vh;
+        right: 8vw;
+      }
+      &:nth-child(3) {
+        top: 16vh;
+        right: 4vw;
+      }
+      &:nth-child(4) {
+        top: 28vh;
+        right: 1.5vw;
+      }
+      &:nth-child(5) {
+        top: 41vh;
+        right: 1vw;
+      }
+      &:nth-child(6) {
+        top: 54vh;
+        right: 3vw;
+      }
+      &:nth-child(7) {
+        top: 67vh;
+        right: 7vw;
+      }
+      &:nth-child(8) {
+        top: 77vh;
+        right: 13vw;
+      }
+      &:nth-child(9) {
+        top: 80.5vh;
+        right: 20vw;
+      }
+      &:nth-child(10) {
+        top: 80vh;
+        right: 28vw;
+      }
 
-    //   &:hover {
-    //     #{$self}__icon {
-    //       transform: translate(-50%, -50%) scale(1.05);
-    //     }
+      &:hover {
+        #{$self}__icon {
+          transform: translate(-50%, -50%) scale(1.05);
+        }
 
-    //     #{$self}__glow {
-    //       opacity: 0.8;
-    //       transition: opacity 0.4s ease, transform 0.5s ease;
-    //     }
+        #{$self}__glow {
+          opacity: 0.8;
+          transition: opacity 0.4s ease, transform 0.5s ease;
+        }
 
-    //     #{$self}__plus {
-    //       opacity: 1;
-    //     }
-    //   }
-    // }
+        #{$self}__plus {
+          opacity: 1;
+        }
+      }
+    }
 
     // 1280 =< w >= 1281 && h >= 970
-    // @media screen and (min-width: $macbook-width) and (max-width: $macbook-width + 1px) and (min-height: 950px) {
-    //   &:nth-child(1) { top: -0.5vh; right: 16vw; }
-    //   &:nth-child(2) { top: 5vh; right: 9vw; }
-    //   &:nth-child(3) { top: 14vh; right: 5vw; }
-    //   &:nth-child(4) { top: 23vh; right: 2vw; }
-    //   &:nth-child(5) { top: 33vh; right: 1.5vw; }
-    //   &:nth-child(6) { top: 44vh; right: 2vw; }
-    //   &:nth-child(7) { top: 55vh; right: 5vw; }
-    //   &:nth-child(8) { top: 63vh; right: 10vw; }
-    //   &:nth-child(9) { top: 69vh; right: 17vw; }
-    //   &:nth-child(10) { top: 71vh; right: 25vw; }
-    // }
+    @media screen and (min-width: $macbook-width) and (max-width: $macbook-width + 1px) and (min-height: 950px) {
+      &:nth-child(1) {
+        top: -0.5vh;
+        right: 16vw;
+      }
+      &:nth-child(2) {
+        top: 5vh;
+        right: 9vw;
+      }
+      &:nth-child(3) {
+        top: 14vh;
+        right: 5vw;
+      }
+      &:nth-child(4) {
+        top: 23vh;
+        right: 2vw;
+      }
+      &:nth-child(5) {
+        top: 33vh;
+        right: 1.5vw;
+      }
+      &:nth-child(6) {
+        top: 44vh;
+        right: 2vw;
+      }
+      &:nth-child(7) {
+        top: 55vh;
+        right: 5vw;
+      }
+      &:nth-child(8) {
+        top: 63vh;
+        right: 10vw;
+      }
+      &:nth-child(9) {
+        top: 69vh;
+        right: 17vw;
+      }
+      &:nth-child(10) {
+        top: 71vh;
+        right: 25vw;
+      }
+    }
 
-    // >= 1440
-    // @include minW($laptop-lg-width) {
-    //   &:nth-child(1) {
-    //     top: 0;
-    //   }
+    //>= 1440
+    @include minW($laptop-lg-width) {
+      &:nth-child(1) {
+        top: 0;
+      }
 
-    //   &:hover {
-    //     #{$self}__icon {
-    //       transform: translate(-50%, -50%) scale(1.20);
-    //     }
-    //   }
-    // }
+      &:hover {
+        #{$self}__icon {
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+      }
+    }
 
-    // >= 1900
-    // @include minW($full-hd-width) {
-    //   &:nth-child(1) { top: 1.5vh; right: 15vw; }
-    //   &:nth-child(2) { top: 9vh; right: 9vw; }
-    //   &:nth-child(3) { top: 19vh; right: 5vw; }
-    //   &:nth-child(4) { top: 30vh; right: 3vw; }
-    //   &:nth-child(5) { top: 41vh; right: 2vw; }
-    //   &:nth-child(6) { top: 54vh; right: 3vw; }
-    //   &:nth-child(7) { top: 66vh; right: 6vw; }
-    //   &:nth-child(8) { top: 76vh; right: 11vw; }
-    //   &:nth-child(9) { top: 82vh; right: 17vw; }
-    //   &:nth-child(10) { top: 84vh; right: 24vw; }
+    //>= 1900
+    @include minW($full-hd-width) {
+      &:nth-child(1) {
+        top: 1.5vh;
+        right: 15vw;
+      }
+      &:nth-child(2) {
+        top: 9vh;
+        right: 9vw;
+      }
+      &:nth-child(3) {
+        top: 19vh;
+        right: 5vw;
+      }
+      &:nth-child(4) {
+        top: 30vh;
+        right: 3vw;
+      }
+      &:nth-child(5) {
+        top: 41vh;
+        right: 2vw;
+      }
+      &:nth-child(6) {
+        top: 54vh;
+        right: 3vw;
+      }
+      &:nth-child(7) {
+        top: 66vh;
+        right: 6vw;
+      }
+      &:nth-child(8) {
+        top: 76vh;
+        right: 11vw;
+      }
+      &:nth-child(9) {
+        top: 82vh;
+        right: 17vw;
+      }
+      &:nth-child(10) {
+        top: 84vh;
+        right: 24vw;
+      }
 
-    //   &:hover {
-    //     #{$self}__icon {
-    //       transform: translate(-50%, -50%) scale(1.5);
-    //     }
-    //   }
-    // }
+      &:hover {
+        #{$self}__icon {
+          transform: translate(-50%, -50%) scale(1.5);
+        }
+      }
+    }
   }
 
   &-Icon {
@@ -166,21 +271,21 @@
     }
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   @include position(absolute, 50% null null 50%);
-    //   transform: translate(-50%, -50%);
-    //   transition: transform 0.4s ease;
-    // }
+    @include minW($macbook-width) {
+      @include position(absolute, 50% null null 50%);
+      transform: translate(-50%, -50%);
+      transition: transform 0.4s ease;
+    }
 
-    // // >= 1440
-    // @include minW($laptop-lg-width) {
-    //   transform: translate(-50%, -50%) scale(1.15);
-    // }
+    // >= 1440
+    @include minW($laptop-lg-width) {
+      transform: translate(-50%, -50%) scale(1.15);
+    }
 
-    // // >= 1900
-    // @include minW($full-hd-width) {
-    //   transform: translate(-50%, -50%) scale(1.4);
-    // }
+    // >= 1900
+    @include minW($full-hd-width) {
+      transform: translate(-50%, -50%) scale(1.4);
+    }
   }
 
   &-Flavor {
@@ -223,10 +328,10 @@
     }
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   display: block;
-    //   opacity: 0;
-    // }
+    @include minW($macbook-width) {
+      display: block;
+      opacity: 0;
+    }
   }
 
   &-Action {
@@ -241,12 +346,12 @@
     opacity: 0;
 
     // >= 1280
-    // @include minW($macbook-width) {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   animation: fadeToggle 10s ease infinite;
-    // }
+    @include minW($macbook-width) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeToggle 10s ease infinite;
+    }
 
     &.isHidden {
       display: none;
