@@ -16,8 +16,8 @@
 
   // >= 1440
   @include minW($laptop-lg-width) {
-    &__slide:hover {
-      #{$self}__icon {
+    &-Slide:hover {
+      #{$self}-Icon {
         transform: translate(-50%, -50%) scale(1.2);
       }
     }
@@ -25,8 +25,8 @@
 
   // >= 1900
   @include minW($full-hd-width) {
-    &__slide:hover {
-      #{$self}__icon {
+    &-Slide:hover {
+      #{$self}-Icon {
         transform: translate(-50%, -50%) scale(1.45);
       }
     }
@@ -135,16 +135,16 @@
       }
 
       &:hover {
-        #{$self}__icon {
+        #{$self}-Icon {
           transform: translate(-50%, -50%) scale(1.05);
         }
 
-        #{$self}__glow {
+        #{$self}-Glow {
           opacity: 0.8;
           transition: opacity 0.4s ease, transform 0.5s ease;
         }
 
-        #{$self}__plus {
+        #{$self}-Plus {
           opacity: 1;
         }
       }
@@ -201,7 +201,7 @@
       }
 
       &:hover {
-        #{$self}__icon {
+        #{$self}-Icon {
           transform: translate(-50%, -50%) scale(1.2);
         }
       }
@@ -251,7 +251,7 @@
       }
 
       &:hover {
-        #{$self}__icon {
+        #{$self}-Icon {
           transform: translate(-50%, -50%) scale(1.5);
         }
       }
